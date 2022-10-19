@@ -1,5 +1,7 @@
 package adventOfCode2021;
 
+import adventOfCode2021.helpers.CommonBits;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;

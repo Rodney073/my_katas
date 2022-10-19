@@ -1,4 +1,4 @@
-package adventOfCode2021;
+package adventOfCode2021.helpers;
 
 import java.util.List;
 

@@ -1,5 +1,7 @@
 package adventOfCode2021;
 
+import adventOfCode2021.helpers.Line;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

@@ -1,5 +1,8 @@
 package adventOfCode2021;
 
+import adventOfCode2021.helpers.BingoData;
+import adventOfCode2021.helpers.Score;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
