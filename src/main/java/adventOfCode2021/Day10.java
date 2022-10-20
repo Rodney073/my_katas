@@ -41,7 +41,7 @@ public class Day10 {
         return scoreList.get(scoreList.size()/2);
     }
 
-    List <String> getCompletions() {
+    private List <String> getCompletions() {
 
         List <String> completionList = new ArrayList<>();
         List<String> incompleteLines = getIncompleteLines();
@@ -58,7 +58,7 @@ public class Day10 {
         return completionList;
     }
 
-    public List<String> getIncompleteLines() {
+    private List<String> getIncompleteLines() {
 
         List<String> incompleteLines = new ArrayList<>();
         List<Character> illegalCharList = new ArrayList<>();
@@ -66,7 +66,7 @@ public class Day10 {
         for (String listOfChunkLine : listOfChunkLines) {
 
             int sizeOfIllegalCharListBefore = illegalCharList.size();
-            
+
             StringBuilder chunk = new StringBuilder();
             observeLine(illegalCharList, listOfChunkLine, chunk);
 
