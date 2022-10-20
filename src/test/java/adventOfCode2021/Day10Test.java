@@ -9,7 +9,12 @@ class Day10Test {
     @Test
     public void day10_part1() {
         Day10 day10 = new Day10();
-        //System.out.println(day10.calculateSyntaxErrorScore());
         Assertions.assertEquals(311895, day10.calculateSyntaxErrorScore());
+    }
+
+    @Test
+    public void day10_part2() {
+        Day10 day10 = new Day10();
+        Assertions.assertEquals(2904180541L, day10.calculateMiddleScore());
     }
 }
