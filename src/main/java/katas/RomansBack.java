@@ -1,42 +1,33 @@
 package katas;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class RomansBack {
 
     public RomansBack() {
     }
 
-    Map<Integer, Character> latinToRomanNum = new TreeMap<Integer, Character>() {{
-        put(1, 'I');
-        put(5, 'V');
-        put(10, 'X');
-        put(50, 'L');
-        put(100, 'C');
-        put(500, 'D');
+    Map<Integer, Character> latinToRomanNum = new LinkedHashMap<Integer, Character>() {{
         put(1000, 'M');
-
+        put(500, 'D');
+        put(100, 'C');
+        put(50, 'L');
+        put(10, 'X');
+        put(5, 'V');
+        put(1, 'I');
     }};
 
     public String transform(int numToBeConverted) {
 
-        StringBuilder sb = new StringBuilder();
-        ArrayList<Integer> latinNumList = new ArrayList<>();
-
-        for (Map.Entry<Integer, Character> entry : latinToRomanNum.entrySet()) {
-            latinNumList.add(entry.getKey());
+        if (numToBeConverted <= 0 || numToBeConverted > 3999) {
+            return "";
         }
 
-        Collections.reverse(latinNumList);
+        StringBuilder sb = new StringBuilder();
+        ArrayList<Integer> latinNumList = new ArrayList<>(latinToRomanNum.keySet());
 
         for (int i = 0; i < latinNumList.size(); i++) {
-
-            if (numToBeConverted <= 0) {
-                break;
-            }
 
             int actualRomanNumValue = latinNumList.get(i);
             int howManyTimes = (int) Math.floor((double) numToBeConverted / latinNumList.get(i));

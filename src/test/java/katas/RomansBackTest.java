@@ -9,6 +9,8 @@ public class RomansBackTest {
 
     @Test
     public void testRomanNumTransformer() {
+        Assertions.assertEquals("", romansBack.transform(0));
+        Assertions.assertEquals("", romansBack.transform(9019));
         Assertions.assertEquals("MMXIX", romansBack.transform(2019));
 
         Assertions.assertEquals("XXXIX", romansBack.transform(39));
